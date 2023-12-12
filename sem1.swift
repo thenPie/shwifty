@@ -57,4 +57,17 @@ print("Final k is", k)
 прекратите выполнение цикла.
 */
 
+var k_two: Int = 9
+let on_two = Array(stride(from: 11, through: 49, by: 2))
 
+for number in on_two {
+  let cur: Int = number + k_two
+  if (cur % 2 == 0) {
+    k_two += 1
+  } else {
+    print("Next")
+    break
+  }
+}
+
+print("Final k is", k_two)
