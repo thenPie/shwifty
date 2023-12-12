@@ -34,26 +34,19 @@ if (a * s > 10){
 к следующей итерации
 */
 
-func randomOddNumber(inRange range: ClosedRange<Int>) -> Int {
-  var randomNumber: Int
-  repeat {
-    randomNumber = Int.random(in: range)
-  } while randomNumber % 2 == 0
-  return randomNumber
-}
-
 var k: Int = 9
-let ron = randomOddNumber(inRange: 10...50)
-var cur: Int = ron + k
+let on = Array(stride(from: 11, through: 49, by: 2))
 
-print(k, ron, cur)
-
-while cur % 2 != 0 {
-  print("Next")
+for number in on {
+  let cur: Int = number + k
+  if (cur % 2 == 0) {
+    k += 2
+  } else {
+    print("Next")
+  }
 }
-k += 2
 
-print(k, cur)
+print("Final k is", k)
 
 /**
 Создайте переменную “k”, равную 9. В диапазоне
