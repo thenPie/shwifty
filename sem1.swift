@@ -35,25 +35,25 @@ if (a * s > 10){
 */
 
 func randomOddNumber(inRange range: ClosedRange<Int>) -> Int {
-    var randomNumber: Int
-    repeat {
-        randomNumber = Int.random(in: range)
-    } while randomNumber % 2 == 0
-    return randomNumber
+  var randomNumber: Int
+  repeat {
+    randomNumber = Int.random(in: range)
+  } while randomNumber % 2 == 0
+  return randomNumber
 }
 
 var k: Int = 9
 let ron = randomOddNumber(inRange: 10...50)
 var cur: Int = ron + k
 
-if (cur % 2 == 0) {
-    print("happened")
-    cur += 2
-} else {
-    print("Next")
-}
+print(k, ron, cur)
 
-print(cur)
+while cur % 2 != 0 {
+  print("Next")
+}
+k += 2
+
+print(k, cur)
 
 /**
 Создайте переменную “k”, равную 9. В диапазоне
