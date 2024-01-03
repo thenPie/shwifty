@@ -25,8 +25,18 @@ struct PizzaEmployee {
     }
 }
 
-var pizzaChef = PizzaEmployee(name: "Иван", salary: 30000, position: .chef)
-var pizzaCashier = PizzaEmployee(name: "Аня", salary: 25000, position: .cashier)
+// Массив работников
+var pizzaEmployees: [PizzaEmployee] = []
 
-pizzaChef.displayInfo()
-pizzaCashier.displayInfo()
+// Работники
+let Staff001 = PizzaEmployee(name: "Иван", salary: 30000, position: .chef)
+let Staff777 = PizzaEmployee(name: "Алексей", salary: 25000, position: .cashier)
+let Staff249 = PizzaEmployee(name: "Екатерина", salary: 23000, position: .chef)
+let Staff438 = PizzaEmployee(name: "Мария", salary: 28000, position: .cashier)
+
+pizzaEmployees.append(contentsOf: [Staff001, Staff777, Staff249, Staff438])
+
+for employee in pizzaEmployees {
+    employee.displayInfo()
+    print("--------------")
+}
